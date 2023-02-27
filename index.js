@@ -10,3 +10,10 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
+
+function startTeamBuild() {
+    Manager
+    const manager = new Employee (this.name, this.id, this.email, 'Manager')
+};
+
+startTeamBuild()
