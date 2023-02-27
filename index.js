@@ -23,6 +23,17 @@ function newEmployee() {
             else { return true }
         }
     })
+    .then((answer) => {
+        if (answer.employeeType === 'Manager') {
+            console.log("You chose Manager!")
+        }
+        if (answer.employeeType === "Engineer") {
+            console.log("You chose Engineer!")
+        }
+        if (answer.employeeType === "Intern") {
+            console.log("You chose Intern!")
+        }
+    })
 }
 
 newEmployee()
