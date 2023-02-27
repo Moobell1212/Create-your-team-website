@@ -10,6 +10,19 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
+function newEmployee() {
+    inquirer.prompt({
+        type: 'list',
+        name: 'employeeType',
+        message: 'What type of employee do you want to add?',
+        choices: ['Manager', 'Engineer', 'Intern'],
+        validate: answer => {
+            if (answer === "") {
+                return "Employee tye required"
+            }
+            else { return true }
+        }
+    })
+}
 
-// TODO: Write Code to gather information about the development team members, and render the HTML file.
-
+newEmployee()
