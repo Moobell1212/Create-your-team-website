@@ -80,23 +80,26 @@ function askQuestions(employeeType) {
     {
         type: 'input',
         name: 'github',
-        message: 'What is the engineers GitHub username?',
+        message: "What is the engineer's GitHub username?",
         validate: answer => {
             if (answer === "") {
                 return "Engineer GitHub username required"
             }
             else { return true }
-        }
+        },
+        when: () => employeeType === "Engineer"
     },
     {
         type: 'input',
         name: 'school',
-        message: "What is the intern's school?"
+        message: "What is the intern's school?",
+        when: () => employeeType === "Intern"
     },
     {
         type: 'input',
         name: 'officeNo',
-        message: "What is the managers office number?"
+        message: "What is the managers office number?",
+        when: () => employeeType === "Manager"
     }])
 }
 
