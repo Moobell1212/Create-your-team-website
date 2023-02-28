@@ -15,12 +15,18 @@ const team = [];
 
 function startTeamBuild() {
     inquirer.prompt({
-        type: 'input',
-        name: 'employeeType',
-        message: "What is the team manager's name?"
+        type: 'list',
+        name: 'newTeam',
+        message: "Do you want to start building the team?",
+        choices: ['Yes', 'No']
     }
     )
-        .then((answer => askQuestions(answer.employeeType)))
+        .then((answer) => {
+            if (answer.newTeam === "Yes"){
+                answer.employeeType = "Manager"
+            askQuestions(answer.employeeType)}
+        }
+    )
 }
 
 function continueTeamBuild() {
@@ -49,6 +55,18 @@ function continueTeamBuild() {
 function askQuestions(employeeType) {
     // console.log(employeeType)
     inquirer.prompt([{
+        type: 'input',
+        name: 'name',
+        message: 'What is the Manager name?',
+        validate: answer => {
+            if (answer === "") {
+                return "Manager name required"
+            }
+            else { return true }
+        },
+        when: () => employeeType === "Manager"
+    },
+    {
         type: 'input',
         name: 'name',
         message: 'What is the employee name?',
@@ -110,7 +128,7 @@ function askQuestions(employeeType) {
     }
     ])
         .then(answers => {
-            console.log(answers);
+            // console.log(answers);
             if (employeeType === "Manager") {
                 // console.log("You chose Manager!");
                 const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNo);
