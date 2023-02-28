@@ -56,9 +56,7 @@ This is a company team building project using node.js, built using test driven d
 </li>
 </ul>
 
-<img src= "./images/finalproduct.png" style="margin-top: 20px; margin-bottom:30px">
-
-Deployed link: 
+<img src= "./images/finalproduct.png" style="margin-top: 20px; margin-bottom:30px"> 
 
 ## Installation
 To install, on the terminal type:
