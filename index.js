@@ -12,6 +12,8 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
+const team = [];
+
 function startTeamBuild() {
     inquirer.prompt({
         type: 'list',
@@ -21,12 +23,13 @@ function startTeamBuild() {
     })
         .then((answer) => {
             if (answer.employeeType === 'Manager') {
-                console.log("You chose Manager!")
+                console.log("You chose Manager!");
+                askQuestions(answer.employeeType)
             }
-            if (answer.employeeType === "Engineer") {
+            else if (answer.employeeType === "Engineer") {
                 console.log("You chose Engineer!")
             }
-            if (answer.employeeType === "Intern") {
+            else if (answer.employeeType === "Intern") {
                 console.log("You chose Intern!")
             }
             else {
@@ -35,7 +38,8 @@ function startTeamBuild() {
         })
 };
 
-function askQuestions() {
+function askQuestions(employeeType) {
+    console.log(employeeType)
     inquirer.prompt([{
         type: 'input',
         name: 'name',
@@ -62,14 +66,14 @@ function askQuestions() {
         type: 'input',
         name: 'email',
         message: "What is the employee's email address?",
-        validate: answer => {
-            if (!emailCheck.validate(answer)) {
-                return "A valid email is required"
-            }
-            else {
-                return true
-            }
-        }
+        // validate: answer => {
+        //     if (!emailCheck.validate(answer)) {
+        //         return "A valid email is required"
+        //     }
+        //     else {
+        //         return true
+        //     }
+        // }
     },
     {
         type: 'input',
@@ -85,7 +89,13 @@ function askQuestions() {
     {
         type: 'input',
         name: 'school',
-        message: "What is the intern's school?"}])
+        message: "What is the intern's school?"
+    },
+    {
+        type: 'input',
+        name: 'officeNo',
+        message: "What is the managers office number?"
+    }])
 }
 
 startTeamBuild()
