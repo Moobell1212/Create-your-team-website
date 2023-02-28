@@ -18,8 +18,7 @@ This is a company team building project using node.js, built using test driven d
 <li>The terminal must be opened to the correct directory.</li>
 <li>The index.js file must be run by typing 'node index.js'</li>
 <li>The first question will ask if the user wants to start building a team</li>
-  
-  
+</br>
 <img src="./images/startquestion.png" style="margin-top: 20px; margin-bottom:30px">
   
   
