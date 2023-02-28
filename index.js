@@ -100,7 +100,12 @@ function askQuestions(employeeType) {
         name: 'officeNo',
         message: "What is the managers office number?",
         when: () => employeeType === "Manager"
-    }])
+    }
+])
+.then(answers => {
+    console.log(answers);
+    console.log(employeeType);
+})
 }
 
 startTeamBuild()
