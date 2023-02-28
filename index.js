@@ -32,21 +32,22 @@ function continueTeamBuild() {
     })
         .then((answer) => {
             if (answer.employeeType === "Engineer") {
-                console.log("You chose Engineer!");
+                // console.log("You chose Engineer!");
                 askQuestions(answer.employeeType)
             }
             else if (answer.employeeType === "Intern") {
-                console.log("You chose Intern!");
+                // console.log("You chose Intern!");
                 askQuestions(answer.employeeType)
             }
             else {
-                console.log("You have finished building the team!")
+                console.log("You have finished building the team!");
+                console.log(team)
             }
         })
 };
 
 function askQuestions(employeeType) {
-    console.log(employeeType)
+    // console.log(employeeType)
     inquirer.prompt([{
         type: 'input',
         name: 'name',
@@ -111,19 +112,19 @@ function askQuestions(employeeType) {
         .then(answers => {
             console.log(answers);
             if (employeeType === "Manager") {
-                console.log("You chose Manager!");
+                // console.log("You chose Manager!");
                 const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNo);
                 team.push(manager);
                 continueTeamBuild()
             }
             else if (employeeType === "Engineer") {
-                console.log("You chose Engineer!");
+                // console.log("You chose Engineer!");
                 const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
                 team.push(engineer);
                 continueTeamBuild()
             }
             else if (employeeType === "Intern") {
-                console.log("You chose Intern!");
+                // console.log("You chose Intern!");
                 const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
                 team.push(intern);
                 continueTeamBuild()
