@@ -81,7 +81,11 @@ function askQuestions() {
             }
             else { return true }
         }
-    }])
+    },
+    {
+        type: 'input',
+        name: 'school',
+        message: "What is the intern's school?"}])
 }
 
 startTeamBuild()
