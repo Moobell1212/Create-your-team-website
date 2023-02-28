@@ -18,10 +18,14 @@ This is a company team building project using node.js, built using test driven d
 <li>The terminal must be opened to the correct directory.</li>
 <li>The index.js file must be run by typing 'node index.js'</li>
 <li>The first question will ask if the user wants to start building a team</li>
+  
 <img src="./images/startquestion.png" style="margin-top: 20px; margin-bottom:30px">
+  
 <li>The user must first fill in information for the team manager.</li>
 <li>Once the information for the team manager is filled in, the user can choose to add an engineer, an intern or to finish building the team.</li>
+  
 <img src="./images/employeetype.png" style="margin-top: 20px; margin-bottom:30px">
+  
 <ul>
 <li>There is a validator for every user input.</li>
 </ul>
