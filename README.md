@@ -34,26 +34,31 @@ This is a company team building project using node.js, built using test driven d
 <li>The use of a bootstrap jumbotron.</li>
 <li>The use of bootstrap cards.</li>
 <li>Colour coded employee cards</li>
-<li>For the team manager (only 1 allowed):
-- Name
-- Employee ID
-- Email address and link
-- Office number
+<li>For the team manager (only 1 allowed):</li>
+<ul>
+<li>Name</li>
+<li>Employee ID</li>
+<li>Email address and link</li>
+<li>Office number</li>
+</ul>
 </li>
 
-<li>For the engineers:
-- Engineer's Name
-- Employee ID
-- Email address and link
-- GitHub username and link
+<li>For the engineers:</li>
+<ul>
+<li>Engineer's Name</li>
+<li>Employee ID</li>
+<li>Email address and link</li>
+<li>GitHub username and link</li>
+</ul>
 </li>
 
-<li>For the interns:
-- Intern's Name
-- Employee ID
-- Email address and link
-- School name
-</li>
+<li>For the interns:</li>
+<ul>
+<li>Intern's Name</li>
+<li>Employee ID</li>
+<li>Email address and link</li>
+<li>School name</li>
+</ul>
 </ul>
 
 <img src= "./images/finalproduct.png" style="margin-top: 20px; margin-bottom:30px"> 
