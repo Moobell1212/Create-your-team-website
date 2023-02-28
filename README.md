@@ -20,15 +20,12 @@ This is a company team building project using node.js, built using test driven d
 <li>The first question will ask if the user wants to start building a team</li>
 </br>
 <img src="./images/startquestion.png" style="margin-top: 20px; margin-bottom:30px">
-  
-  
+</br> 
 <li>The user must first fill in information for the team manager.</li>
 <li>Once the information for the team manager is filled in, the user can choose to add an engineer, an intern or to finish building the team.</li>
-  
-  
+</br>
 <img src="./images/employeetype.png" style="margin-top: 20px; margin-bottom:30px">
-  
-  
+</br>
 <ul>
 <li>There is a validator for every user input.</li>
 </ul>
@@ -68,9 +65,9 @@ This is a company team building project using node.js, built using test driven d
 </ul>
 </ul>
 
-
+</br>
 <img src= "./images/finalproduct.png" style="margin-top: 20px; margin-bottom:30px"> 
-
+</br>
 
 ## Installation
 To install, on the terminal type:
