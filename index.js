@@ -1,7 +1,6 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const Employee = require("./lib/Employee")
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -15,6 +14,16 @@ const render = require("./src/page-template.js");
 const team = [];
 
 function startTeamBuild() {
+    inquirer.prompt({
+        type: 'input',
+        name: 'employeeType',
+        message: "What is the team manager's name?"
+    }
+    )
+        .then((answer => askQuestions(answer.employeeType)))
+}
+
+function continueTeamBuild() {
     inquirer.prompt({
         type: 'list',
         name: 'employeeType',
@@ -51,7 +60,8 @@ function askQuestions(employeeType) {
                 return "Employee name required"
             }
             else { return true }
-        }
+        },
+        when: () => employeeType !== "Manager"
     },
     {
         type: 'input',
@@ -101,28 +111,25 @@ function askQuestions(employeeType) {
         message: "What is the managers office number?",
         when: () => employeeType === "Manager"
     }
-])
-.then(answers => {
-    console.log(answers);
-    if (employeeType === "Manager"){
-        console.log("You chose Manager!");
-        const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNo);
-        team.push(manager);
-        console.log(team)
-    }
-    else if (employeeType === "Engineer") {
-        console.log("You chose Engineer!");
-        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
-        team.push(engineer);
-        console.log(team)
-    }
-    else if (employeeType === "Intern") {
-        console.log("You chose Intern!");
-        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
-        team.push(intern);
-        console.log(team)
-    }
-})
+    ])
+        .then(answers => {
+            console.log(answers);
+            if (employeeType === "Manager") {
+                console.log("You chose Manager!");
+                const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNo);
+                team.push(manager);
+            }
+            else if (employeeType === "Engineer") {
+                console.log("You chose Engineer!");
+                const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+                team.push(engineer);
+            }
+            else if (employeeType === "Intern") {
+                console.log("You chose Intern!");
+                const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+                team.push(intern);
+            }
+        })
 }
 
 startTeamBuild()
