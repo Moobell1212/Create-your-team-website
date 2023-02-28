@@ -104,7 +104,24 @@ function askQuestions(employeeType) {
 ])
 .then(answers => {
     console.log(answers);
-    console.log(employeeType);
+    if (employeeType === "Manager"){
+        console.log("You chose Manager!");
+        const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNo);
+        team.push(manager);
+        console.log(team)
+    }
+    else if (employeeType === "Engineer") {
+        console.log("You chose Engineer!");
+        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+        team.push(engineer);
+        console.log(team)
+    }
+    else if (employeeType === "Intern") {
+        console.log("You chose Intern!");
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+        team.push(intern);
+        console.log(team)
+    }
 })
 }
 
