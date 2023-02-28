@@ -28,14 +28,10 @@ function continueTeamBuild() {
         type: 'list',
         name: 'employeeType',
         message: 'What type of employee do you want to add?',
-        choices: ['Manager', 'Engineer', 'Intern', 'Finish building team'],
+        choices: ['Engineer', 'Intern', 'Finish building team'],
     })
         .then((answer) => {
-            if (answer.employeeType === 'Manager') {
-                console.log("You chose Manager!");
-                askQuestions(answer.employeeType)
-            }
-            else if (answer.employeeType === "Engineer") {
+            if (answer.employeeType === "Engineer") {
                 console.log("You chose Engineer!");
                 askQuestions(answer.employeeType)
             }
@@ -118,16 +114,19 @@ function askQuestions(employeeType) {
                 console.log("You chose Manager!");
                 const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNo);
                 team.push(manager);
+                continueTeamBuild()
             }
             else if (employeeType === "Engineer") {
                 console.log("You chose Engineer!");
                 const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
                 team.push(engineer);
+                continueTeamBuild()
             }
             else if (employeeType === "Intern") {
                 console.log("You chose Intern!");
                 const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
                 team.push(intern);
+                continueTeamBuild()
             }
         })
 }
