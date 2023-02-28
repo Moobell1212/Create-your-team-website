@@ -70,12 +70,18 @@ function askQuestions() {
                 return true
             }
         }
-    }]
-
-
-    )
-
-
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is the engineers GitHub username?',
+        validate: answer => {
+            if (answer === "") {
+                return "Engineer GitHub username required"
+            }
+            else { return true }
+        }
+    }])
 }
 
 startTeamBuild()
