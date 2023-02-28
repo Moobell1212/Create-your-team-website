@@ -81,7 +81,7 @@ If there are any suggestions for improoving this project:
 <li>Create your branch</li>
 <li>Commit your changes</li>
 <li>Push your code to the branch</li>
-<li>Create a pull request in the repository</li>
+<li>Create a merge request in the repository</li>
 </ol>
 
 ## License
