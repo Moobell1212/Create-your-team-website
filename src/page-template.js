@@ -60,6 +60,7 @@ const generateTeam = team => {
 
     const html = [];
 
+    // sorts through each object in the team array to render the correct object to the correct html building function
     html.push(team
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => generateManager(manager))

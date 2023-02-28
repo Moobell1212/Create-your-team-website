@@ -11,8 +11,10 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
+// empty team array to push to later
 const team = [];
 
+// first function to get first get manager information before later building the team
 function startTeamBuild() {
     inquirer.prompt({
         type: 'list',
@@ -29,6 +31,7 @@ function startTeamBuild() {
     )
 }
 
+// function for adding as many engineers and interns as wanted
 function continueTeamBuild() {
     inquirer.prompt({
         type: 'list',
@@ -56,6 +59,7 @@ function continueTeamBuild() {
         })
 };
 
+// questions to be asked regarding each employee
 function askQuestions(employeeType) {
     // console.log(employeeType)
     inquirer.prompt([{
@@ -97,14 +101,14 @@ function askQuestions(employeeType) {
         type: 'input',
         name: 'email',
         message: "What is the employee's email address?",
-        // validate: answer => {
-        //     if (!emailCheck.validate(answer)) {
-        //         return "A valid email is required"
-        //     }
-        //     else {
-        //         return true
-        //     }
-        // }
+        validate: answer => {
+            if (!emailCheck.validate(answer)) {
+                return "A valid email is required"
+            }
+            else {
+                return true
+            }
+        }
     },
     {
         type: 'input',
@@ -154,4 +158,5 @@ function askQuestions(employeeType) {
         })
 }
 
+// starts the team building functions
 startTeamBuild()
