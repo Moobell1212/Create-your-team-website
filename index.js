@@ -126,12 +126,24 @@ function askQuestions(employeeType) {
         type: 'input',
         name: 'school',
         message: "What is the intern's school?",
+        validate: answer => {
+            if (answer === "") {
+                return "Intern school name required"
+            }
+            else { return true }
+        },
         when: () => employeeType === "Intern"
     },
     {
         type: 'input',
         name: 'officeNo',
-        message: "What is the managers office number?",
+        message: "What is the manager's office number?",
+        validate: answer => {
+            if (answer === "") {
+                return "Manager office number required"
+            }
+            else { return true }
+        },
         when: () => employeeType === "Manager"
     }
     ])
