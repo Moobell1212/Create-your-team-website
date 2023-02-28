@@ -47,7 +47,11 @@ function continueTeamBuild() {
             }
             else {
                 console.log("You have finished building the team!");
-                console.log(team)
+                console.log(team);
+                if (!fs.existsSync(OUTPUT_DIR)) {
+                    fs.mkdirSync(OUTPUT_DIR)
+                }
+                fs.writeFileSync(outputPath, render(team), "UTF-8")
             }
         })
 };
