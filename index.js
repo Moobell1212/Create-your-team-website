@@ -27,10 +27,12 @@ function startTeamBuild() {
                 askQuestions(answer.employeeType)
             }
             else if (answer.employeeType === "Engineer") {
-                console.log("You chose Engineer!")
+                console.log("You chose Engineer!");
+                askQuestions(answer.employeeType)
             }
             else if (answer.employeeType === "Intern") {
-                console.log("You chose Intern!")
+                console.log("You chose Intern!");
+                askQuestions(answer.employeeType)
             }
             else {
                 console.log("You have finished building the team!")
