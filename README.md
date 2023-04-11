@@ -1,5 +1,19 @@
 # Create-your-team-website
 
+<div align="center" id="top>
+</br>
+
+[![Contributors](https://img.shields.io/github/contributors/Moobell1212/Create-your-team-website?style=for-the-badge)](https://github.com//Moobell1212/Create-your-team-website/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/Moobell1212/Create-your-team-website?style=for-the-badge)](https://github.com//Moobell1212/Create-your-team-website/forks)
+[![Stargazers](https://img.shields.io/github/stars/Moobell1212/Create-your-team-website?style=for-the-badge)](https://github.com//Moobell1212/Create-your-team-website/stargazers)
+[![Issues](https://img.shields.io/github/issues/Moobell1212/Create-your-team-website?style=for-the-badge)](https://github.com//Moobell1212/Create-your-team-website/issues)
+
+</br>
+
+[![My Skills](https://skillicons.dev/icons?i=js,html,node,css,bootstrap)](https://skillicons.dev)
+</div>
+</br>
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # Description
