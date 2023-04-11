@@ -10,7 +10,7 @@
 
 </br>
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,node,css,bootstrap)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,nodejs,css,bootstrap)](https://skillicons.dev)
 </div>
 </br>
 
@@ -83,6 +83,8 @@ This is a company team building project using node.js, built using test driven d
 <img src= "./images/finalproduct.png" style="margin-top: 20px; margin-bottom:30px"> 
 </br>
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Installation
 To install, on the terminal type:
 ```
@@ -94,6 +96,8 @@ Install the NPM packages writing the below in the terminal:
 npm install
 ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Contributing
 If there are any suggestions for improoving this project:
 <ol>
@@ -104,11 +108,19 @@ If there are any suggestions for improoving this project:
 <li>Create a merge request in the repository</li>
 </ol>
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## License
 This project is licensed under the MIT license. For more information visit [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Tests
 None
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Questions
 Contact the developer with any questions through GitHub: [Moobell1212](https://github.com/Moobell1212).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
